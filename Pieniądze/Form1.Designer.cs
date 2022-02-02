@@ -29,43 +29,22 @@ namespace Pieniądze
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.BankToJoe = new System.Windows.Forms.Button();
             this.BobToBank = new System.Windows.Forms.Button();
             this.BobToJoe = new System.Windows.Forms.Button();
+            this.JoeToBob = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(60, 25);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 23);
-            this.textBox1.TabIndex = 4;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(60, 143);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 23);
-            this.textBox2.TabIndex = 5;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(60, 85);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 23);
-            this.textBox3.TabIndex = 6;
             // 
             // BankToJoe
             // 
             this.BankToJoe.Location = new System.Drawing.Point(60, 228);
             this.BankToJoe.Name = "BankToJoe";
             this.BankToJoe.Size = new System.Drawing.Size(128, 41);
-            this.BankToJoe.TabIndex = 1;
+            this.BankToJoe.TabIndex = 7;
             this.BankToJoe.Text = "Daj 10zł Joemu";
-            this.BankToJoe.UseVisualStyleBackColor = true;
             this.BankToJoe.Click += new System.EventHandler(this.BankToJoe_Click);
             // 
             // BobToBank
@@ -88,14 +67,52 @@ namespace Pieniądze
             this.BobToJoe.UseVisualStyleBackColor = true;
             this.BobToJoe.Click += new System.EventHandler(this.BobToJoe_Click);
             // 
+            // JoeToBob
+            // 
+            this.JoeToBob.Location = new System.Drawing.Point(60, 284);
+            this.JoeToBob.Name = "JoeToBob";
+            this.JoeToBob.Size = new System.Drawing.Size(128, 39);
+            this.JoeToBob.TabIndex = 8;
+            this.JoeToBob.Text = "Joe daje 10zł Bobowi";
+            this.JoeToBob.UseVisualStyleBackColor = true;
+            this.JoeToBob.Click += new System.EventHandler(this.JoeToBob_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(60, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(38, 15);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "label1";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(60, 81);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(38, 15);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "label2";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(60, 139);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(38, 15);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "label3";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(429, 364);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.JoeToBob);
             this.Controls.Add(this.BobToJoe);
             this.Controls.Add(this.BobToBank);
             this.Controls.Add(this.BankToJoe);
@@ -107,12 +124,13 @@ namespace Pieniądze
         }
 
         #endregion
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Button BankToJoe;
         private System.Windows.Forms.Button BobToBank;
         private System.Windows.Forms.Button BobToJoe;
+        private System.Windows.Forms.Button JoeToBob;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }
 
