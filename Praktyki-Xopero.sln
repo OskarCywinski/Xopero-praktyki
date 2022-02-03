@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.32106.194
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pieniądze", "Pieniądze\Pieniądze.csproj", "{FE97C0B5-414F-4800-8E8F-689B3E3268C2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "kalkulator odległości", "kalkulator odległości\kalkulator odległości.csproj", "{FC3A59AB-2419-4900-A623-0E463C3E25A1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "kalkulator odległości", "kalkulator odległości\kalkulator odległości.csproj", "{FC3A59AB-2419-4900-A623-0E463C3E25A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Słonie", "Słonie\Słonie.csproj", "{45292C76-891B-4D6A-92BB-BDD7FD13B7C1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{FC3A59AB-2419-4900-A623-0E463C3E25A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC3A59AB-2419-4900-A623-0E463C3E25A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FC3A59AB-2419-4900-A623-0E463C3E25A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45292C76-891B-4D6A-92BB-BDD7FD13B7C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45292C76-891B-4D6A-92BB-BDD7FD13B7C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45292C76-891B-4D6A-92BB-BDD7FD13B7C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45292C76-891B-4D6A-92BB-BDD7FD13B7C1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
