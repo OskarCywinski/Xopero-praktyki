@@ -7,7 +7,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pieniądze", "Pieniądze\Pi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "kalkulator odległości", "kalkulator odległości\kalkulator odległości.csproj", "{FC3A59AB-2419-4900-A623-0E463C3E25A1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Słonie", "Słonie\Słonie.csproj", "{45292C76-891B-4D6A-92BB-BDD7FD13B7C1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Słonie", "Słonie\Słonie.csproj", "{45292C76-891B-4D6A-92BB-BDD7FD13B7C1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gra w literki", "Gra w literki\Gra w literki.csproj", "{71A90FC3-753B-440B-9FB6-08E8B05863D5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Planowanie przyjęcia", "Planowanie przyjęcia\Planowanie przyjęcia.csproj", "{D19BEFC9-8ABF-4940-9865-E7B3FDEF09E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hermetyzacja", "Hermetyzacja\Hermetyzacja.csproj", "{BA173156-DC82-44BE-B2E5-1ED077187CC7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Planowanie przyjęcia 2", "Planowanie przyjęcia 2\Planowanie przyjęcia 2.csproj", "{B1BB0BC2-D165-43E0-9650-D92DE64FA04B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +35,22 @@ Global
 		{45292C76-891B-4D6A-92BB-BDD7FD13B7C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{45292C76-891B-4D6A-92BB-BDD7FD13B7C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{45292C76-891B-4D6A-92BB-BDD7FD13B7C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71A90FC3-753B-440B-9FB6-08E8B05863D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71A90FC3-753B-440B-9FB6-08E8B05863D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71A90FC3-753B-440B-9FB6-08E8B05863D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71A90FC3-753B-440B-9FB6-08E8B05863D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D19BEFC9-8ABF-4940-9865-E7B3FDEF09E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D19BEFC9-8ABF-4940-9865-E7B3FDEF09E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D19BEFC9-8ABF-4940-9865-E7B3FDEF09E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D19BEFC9-8ABF-4940-9865-E7B3FDEF09E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA173156-DC82-44BE-B2E5-1ED077187CC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA173156-DC82-44BE-B2E5-1ED077187CC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA173156-DC82-44BE-B2E5-1ED077187CC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA173156-DC82-44BE-B2E5-1ED077187CC7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1BB0BC2-D165-43E0-9650-D92DE64FA04B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1BB0BC2-D165-43E0-9650-D92DE64FA04B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1BB0BC2-D165-43E0-9650-D92DE64FA04B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1BB0BC2-D165-43E0-9650-D92DE64FA04B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
