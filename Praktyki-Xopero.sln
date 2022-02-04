@@ -17,9 +17,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hermetyzacja", "Hermetyzacj
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Planowanie przyjęcia 2", "Planowanie przyjęcia 2\Planowanie przyjęcia 2.csproj", "{B1BB0BC2-D165-43E0-9650-D92DE64FA04B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Farmer", "Farmer\Farmer.csproj", "{72C11DA0-1BA0-4E78-B1D8-DAB0B1A3F7D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Farmer", "Farmer\Farmer.csproj", "{72C11DA0-1BA0-4E78-B1D8-DAB0B1A3F7D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kalkulator kosztów przyjęć", "Kalkulator kosztów przyjęć\Kalkulator kosztów przyjęć.csproj", "{6A7DAB70-374B-4B17-A160-DBED6B3298C8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kalkulator kosztów przyjęć", "Kalkulator kosztów przyjęć\Kalkulator kosztów przyjęć.csproj", "{6A7DAB70-374B-4B17-A160-DBED6B3298C8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "locksmith-jewelthief", "locksmith-jewelthief\locksmith-jewelthief.csproj", "{875DFFBD-A700-43B5-8E69-1FB03558A4F8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zarządzanie ulem", "Zarządzanie ulem\Zarządzanie ulem.csproj", "{2BAE35A7-1605-406C-969A-909A3AB470A6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +67,14 @@ Global
 		{6A7DAB70-374B-4B17-A160-DBED6B3298C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6A7DAB70-374B-4B17-A160-DBED6B3298C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6A7DAB70-374B-4B17-A160-DBED6B3298C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{875DFFBD-A700-43B5-8E69-1FB03558A4F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{875DFFBD-A700-43B5-8E69-1FB03558A4F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{875DFFBD-A700-43B5-8E69-1FB03558A4F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{875DFFBD-A700-43B5-8E69-1FB03558A4F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BAE35A7-1605-406C-969A-909A3AB470A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BAE35A7-1605-406C-969A-909A3AB470A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BAE35A7-1605-406C-969A-909A3AB470A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BAE35A7-1605-406C-969A-909A3AB470A6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

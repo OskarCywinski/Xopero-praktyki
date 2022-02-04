@@ -26,11 +26,11 @@ namespace Kalkulator_kosztów_przyjęć
             return CostOfBeveragesPerPerson;
         }
 
-        public decimal Cost
+        override public decimal Cost
         {
             get
             {
-                decimal totalCost = CalculateCostOfDecorations();
+                decimal totalCost = base.Cost;
                 totalCost += ((CalculateCostOfBeveragesPerPerson() + CostOfFoodPerPerson) * NumberOfPeople);
                 if (HealthyOption)
                     totalCost *= 0.95M;

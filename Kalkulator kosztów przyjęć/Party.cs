@@ -19,6 +19,18 @@ namespace Kalkulator_kosztów_przyjęć
 
             return CostOfDecorations;
         }
+        virtual public decimal Cost
+        {
+            get
+            {
+                decimal totalCost = CalculateCostOfDecorations();
+                totalCost += CostOfFoodPerPerson * NumberOfPeople;
+
+                if (NumberOfPeople > 12)
+                    totalCost += 100;
+                return totalCost;
+            }
+        }
 
     }
 }
