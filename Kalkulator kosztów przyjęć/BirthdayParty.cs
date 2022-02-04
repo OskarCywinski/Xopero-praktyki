@@ -4,11 +4,8 @@ using System.Text;
 
 namespace Kalkulator_kosztów_przyjęć
 {
-    class BirthdayParty
+    class BirthdayParty : Party
     {
-        public const int CostOfFoodPerPerson = 25;
-        public int NumberOfPeople { get; set; }
-        public bool FancyDecorations { get; set; }
         public string CakeWriting { get; set; }
 
         private int ActualLength
@@ -48,18 +45,6 @@ namespace Kalkulator_kosztów_przyjęć
                     return false;
             }
         }
-
-        private decimal CalculateCostOfDecorations()
-        {
-            decimal CostOfDecorations;
-            if (FancyDecorations)
-                CostOfDecorations = (NumberOfPeople * 15.00M) + 50M;
-            else
-                CostOfDecorations = (NumberOfPeople * 7.50M) + 30M;
-
-            return CostOfDecorations;
-        }
-
         public decimal Cost
         {
             get
