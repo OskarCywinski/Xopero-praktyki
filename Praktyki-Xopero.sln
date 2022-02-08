@@ -25,15 +25,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "locksmith-jewelthief", "loc
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zarządzanie ulem", "Zarządzanie ulem\Zarządzanie ulem.csproj", "{2BAE35A7-1605-406C-969A-909A3AB470A6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pszczoły2", "Pszczoły2\Pszczoły2.csproj", "{B5417F7C-A5DA-433A-9CA6-E95EE00DFD9C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pszczoły2", "Pszczoły2\Pszczoły2.csproj", "{B5417F7C-A5DA-433A-9CA6-E95EE00DFD9C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Planet Mission", "Planet Mission\Planet Mission.csproj", "{7A6F7579-5C52-4592-9E2C-20E8F8FFC44A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Planet Mission", "Planet Mission\Planet Mission.csproj", "{7A6F7579-5C52-4592-9E2C-20E8F8FFC44A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Karty", "Karty\Karty.csproj", "{B4E2AB9F-C3FC-4A98-94DF-9D8B34AFC9AE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Karty", "Karty\Karty.csproj", "{B4E2AB9F-C3FC-4A98-94DF-9D8B34AFC9AE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Losowa talia kart", "Losowa talia kart\Losowa talia kart.csproj", "{A9D9FF1B-7724-48A8-A9E2-39F18904009E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Losowa talia kart", "Losowa talia kart\Losowa talia kart.csproj", "{A9D9FF1B-7724-48A8-A9E2-39F18904009E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Numery koszulek sławnych zawodników", "Numery koszulek sławnych zawodników\Numery koszulek sławnych zawodników.csproj", "{600CFEE9-2CBD-4ACA-B6C2-25AFF83BFD58}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Numery koszulek sławnych zawodników", "Numery koszulek sławnych zawodników\Numery koszulek sławnych zawodników.csproj", "{600CFEE9-2CBD-4ACA-B6C2-25AFF83BFD58}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KursyWalut", "KursyWalut\KursyWalut.csproj", "{A61A3AE4-3693-4273-B87F-8D234C0ACB61}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -105,6 +107,10 @@ Global
 		{600CFEE9-2CBD-4ACA-B6C2-25AFF83BFD58}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{600CFEE9-2CBD-4ACA-B6C2-25AFF83BFD58}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{600CFEE9-2CBD-4ACA-B6C2-25AFF83BFD58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A61A3AE4-3693-4273-B87F-8D234C0ACB61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A61A3AE4-3693-4273-B87F-8D234C0ACB61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A61A3AE4-3693-4273-B87F-8D234C0ACB61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A61A3AE4-3693-4273-B87F-8D234C0ACB61}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
