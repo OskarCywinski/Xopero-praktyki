@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.IO.Compression;
+using Newtonsoft.Json;
 
 namespace Interpreter_BrainFuck
 {
@@ -18,49 +20,114 @@ namespace Interpreter_BrainFuck
         {
             InitializeComponent();
         }
-        string tekst;
+        byte[] tekst;
         string file;
-        private void button1_Click(object sender, EventArgs e)
-        {
-            tekst = File.ReadAllText($@"C:\Users\Oskar\Desktop\Praktyki-Xopero\BrainFuck Interpreter\{file}.txt");
-            inter = new Interpreter(tekst);
-            BrainCode.Text = tekst;
-            inter.input = tekst.ToCharArray();
-        }
-        private void NazwaPliku_TextChanged(object sender, EventArgs e)
+        private void NazwaPliku_LostFocus(object sender, EventArgs e)
         {
             file = NazwaPliku.Text;
+            tekst = File.ReadAllBytes($@"C:\Users\Oskar\Desktop\Praktyki-Xopero\Interpreter BrainFuck\{file}");
+            BrainCode.Text = Encoding.UTF8.GetString(tekst);
         }
+
 
         private void button2_Click(object sender, EventArgs e)
         {
-            inter = new Interpreter(tekst);
+            inter = new Interpreter(BrainCode.Text);
             inter.Run();
             Wynik.Text = inter.wynik;
         }
-
-        public static string ToBinary(string tekst)
+        DirectoryInfo directorySelected = new DirectoryInfo(@"C:\Users\Oskar\Desktop\Praktyki-Xopero\Interpreter BrainFuck\");
+        private void convertBinary_Click(object sender, EventArgs e)
         {
-            StringBuilder sb = new StringBuilder();
-            foreach (char ch in tekst.ToCharArray())
+            byte[] compressed = CompressBF(BrainCode.Text);
+            foreach (var b in compressed)
+                Console.Write(b);
+
+            using (FileStream s = File.Create($@"C:\Users\Oskar\Desktop\Praktyki-Xopero\Interpreter BrainFuck\{file}.bfcp"))
             {
-                sb.Append(Convert.ToString(ch, 2).PadLeft(8, '0'));
+                s.Write(compressed);
             }
-            return sb.ToString();
 
         }
 
-        private void convertBinary_Click(object sender, EventArgs e)
+
+
+
+        	Dictionary<char, byte> bfChars = new Dictionary<char, byte>()
+            {
+                { '+', 0 },
+                { '-', 1 },
+                { '<', 2 },
+                { '>', 3 },
+                { '.', 4 },
+                { ',', 5 },
+                { '[', 6 },
+                { ']', 7 },
+
+            };
+            Dictionary<byte, char> bfCharsReverse = new Dictionary<byte, char>()
+            {
+                { 0, '+' },
+                { 1, '-' },
+                { 2, '<' },
+                { 3, '>' },
+                { 4, '.' },
+                { 5, ',' },
+                { 6, '[' },
+                { 7, ']' },
+
+            };
+
+        public byte[] CompressBF(string input)
         {
-           
-            string nazwa = Zapis.Text;
+            List<byte> bytes = new List<byte>();
 
-            //using (BinaryWriter writer = new BinaryWriter(File.Open($@"C:\Users\Oskar\Desktop\Praktyki-Xopero\Interpreter BrainFuck\{nazwa}.bin", FileMode.Create)))
-            //{
-            //   writer.Write(tekst);
-            //}
+            foreach (char c in input.ToCharArray())
+                bytes.Add(bfChars[c]);
 
-            //File.WriteAllText($@"C:\Users\Oskar\Desktop\Praktyki-Xopero\BrainFuck Interpreter\{nazwa}.bin");
+            List<byte> compressedBytes = new List<byte>();
+
+            for (int i = 0; i < bytes.Count - 1; i += 2)
+            {
+                byte b1 = bytes[i];
+                byte b2 = bytes[i + 1];
+
+                byte pair = (byte)((b1 << 3) | b2);
+                compressedBytes.Add(pair);
+            }
+
+            if (bytes.Count % 2 == 1)
+            {
+                compressedBytes.Add(bytes[bytes.Count - 1]);
+            }
+
+            return compressedBytes.ToArray();
+        }
+
+        public string DecompressBF(byte[] input)
+        {
+            string decompressed = "";
+
+            for (int i = 0; i < input.Length; i++)
+            {
+                byte b1 = (byte)(input[i] >> 3);
+                byte b2 = (byte)(input[i] & 0b00000111);
+                byte lastbyte = (byte)(input[i]);
+ 
+                decompressed += bfCharsReverse[b1];
+                decompressed += bfCharsReverse[b2];
+
+
+
+
+            }
+
+            return decompressed;
+        }
+
+        private void dekommpresuj_Click(object sender, EventArgs e)
+        {
+          BrainCode.Text = DecompressBF(File.ReadAllBytes($@"C:\Users\Oskar\Desktop\Praktyki-Xopero\Interpreter BrainFuck\{file}"));
         }
     }
 }
