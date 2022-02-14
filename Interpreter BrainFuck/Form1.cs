@@ -50,79 +50,32 @@ namespace Interpreter_BrainFuck
 
         }
 
-
-
-
-        	Dictionary<char, byte> bfChars = new Dictionary<char, byte>()
-            {
-                { '+', 0 },
-                { '-', 1 },
-                { '<', 2 },
-                { '>', 3 },
-                { '.', 4 },
-                { ',', 5 },
-                { '[', 6 },
-                { ']', 7 },
-
-            };
-            Dictionary<byte, char> bfCharsReverse = new Dictionary<byte, char>()
-            {
-                { 0, '+' },
-                { 1, '-' },
-                { 2, '<' },
-                { 3, '>' },
-                { 4, '.' },
-                { 5, ',' },
-                { 6, '[' },
-                { 7, ']' },
-
-            };
-
         public byte[] CompressBF(string input)
         {
-            List<byte> bytes = new List<byte>();
-
-            foreach (char c in input.ToCharArray())
-                bytes.Add(bfChars[c]);
-
-            List<byte> compressedBytes = new List<byte>();
-
-            for (int i = 0; i < bytes.Count - 1; i += 2)
+            byte[] bytes = Encoding.UTF8.GetBytes(input);
+            using (MemoryStream output = new MemoryStream())
             {
-                byte b1 = bytes[i];
-                byte b2 = bytes[i + 1];
-
-                byte pair = (byte)((b1 << 3) | b2);
-                compressedBytes.Add(pair);
+                using (DeflateStream compressor = new DeflateStream(output, CompressionMode.Compress))
+                {
+                    compressor.Write(bytes, 0, bytes.Length);
+                }
+                return output.ToArray();
             }
 
-            if (bytes.Count % 2 == 1)
-            {
-                compressedBytes.Add(bytes[bytes.Count - 1]);
-            }
-
-            return compressedBytes.ToArray();
         }
 
-        public string DecompressBF(byte[] input)
+        public string DecompressBF(byte[] data)
         {
-            string decompressed = "";
-
-            for (int i = 0; i < input.Length; i++)
+            using (MemoryStream input = new MemoryStream(data))
             {
-                byte b1 = (byte)(input[i] >> 3);
-                byte b2 = (byte)(input[i] & 0b00000111);
-                byte lastbyte = (byte)(input[i]);
- 
-                decompressed += bfCharsReverse[b1];
-                decompressed += bfCharsReverse[b2];
-
-
-
-
+                using (DeflateStream decompressor = new DeflateStream(input, CompressionMode.Decompress))
+                {
+                    using (StreamReader reader = new StreamReader(decompressor))
+                    {
+                        return reader.ReadToEnd();
+                    }
+                }
             }
-
-            return decompressed;
         }
 
         private void dekommpresuj_Click(object sender, EventArgs e)
