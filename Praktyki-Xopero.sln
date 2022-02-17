@@ -41,7 +41,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Interpreter BrainFuck", "In
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Obsluga artykulow", "Obsluga artykulow\Obsluga artykulow.csproj", "{E19FC9A8-FC48-4A34-BEB3-0FB73159D93A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitLabIssues", "GitLabIssues\GitLabIssues.csproj", "{832A53D0-5C30-470C-B7BE-2FCF2B83419E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GitLabIssues", "GitLabIssues\GitLabIssues.csproj", "{832A53D0-5C30-470C-B7BE-2FCF2B83419E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiffViewer", "DiffViewer\DiffViewer.csproj", "{952492C0-0E45-4E41-9DC8-105D76437899}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -129,6 +131,10 @@ Global
 		{832A53D0-5C30-470C-B7BE-2FCF2B83419E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{832A53D0-5C30-470C-B7BE-2FCF2B83419E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{832A53D0-5C30-470C-B7BE-2FCF2B83419E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{952492C0-0E45-4E41-9DC8-105D76437899}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{952492C0-0E45-4E41-9DC8-105D76437899}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{952492C0-0E45-4E41-9DC8-105D76437899}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{952492C0-0E45-4E41-9DC8-105D76437899}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
