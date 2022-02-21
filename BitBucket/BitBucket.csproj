@@ -6,8 +6,4 @@
     <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="DiffPlex" Version="1.7.0" />
-  </ItemGroup>
-
 </Project>
