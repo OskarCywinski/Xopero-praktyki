@@ -71,7 +71,7 @@ namespace BitBucket
             using (client = new HttpClient())
             {
                 client.DefaultRequestHeaders.Add("Authorization", "Bearer " + textBox1.Text);
-                var response = client.GetAsync($"https://api.bitbucket.org/2.0/repositories/{username}?page={ReposPage}&per_page=100").Result;
+                var response = client.GetAsync($"https://api.bitbucket.org/2.0/repositories/{username}?page={ReposPage}&pagelen=100").Result;
                 if (response.IsSuccessStatusCode)
                 {
                     var responseContent = response.Content;
@@ -102,17 +102,18 @@ namespace BitBucket
                 for (int i = 0; i < length; i++)
                 {
                     var values = new List<KeyValuePair<string, string>>();
-                    //values.Add(new KeyValuePair<string, string>("slug", name + i.ToString()));
+                    values.Add(new KeyValuePair<string, string>("slug", name + i.ToString()));
                     var content = new FormUrlEncodedContent(values);
-                    var responsePost = client.PostAsync($"https://api.bitbucket.org/2.0/repositories/{username}/{repo_slug}", content).Result;
+                    var responsePost = client.PostAsync($"https://api.bitbucket.org/2.0/repositories/{username}/{repo_slug}{i}", content).Result;
                     if (responsePost.IsSuccessStatusCode)
                     {
                         MessageBox.Show("działa " + i + " " + responsePost.StatusCode);
+                        checkedListBox1.Items.Add(repo_slug + i);
 
                     }
                     else
                     {
-                        MessageBox.Show("działa nie " + responsePost.StatusCode);
+                        MessageBox.Show("nie działa " + responsePost.StatusCode);
 
                     }
                 }
