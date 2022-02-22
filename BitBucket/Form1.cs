@@ -18,6 +18,7 @@ namespace BitBucket
         List<Repositories> Repo;
         HttpClient client;
         string ID,username;
+        int maxReposList = 100,ReposPage=1;
         public Form1()
         {
             InitializeComponent();
@@ -25,7 +26,19 @@ namespace BitBucket
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if(checkedListBox1.Items.Count > 0)
+                checkedListBox1.Items.Clear();
             getRepositories();
+            for (int i = 0; i <= 1; i++)
+            {
+                if (checkedListBox1.Items.Count == maxReposList)
+                {
+                    ReposPage += 1;
+                    maxReposList += 100;
+                    i = 0;
+                    getRepositories();
+                }
+            }
         }
         private void getUserID()
         {
@@ -50,6 +63,7 @@ namespace BitBucket
             label2.Text = ("Użytkownik: " + jsonObj.username);
             ID = jsonObj.account_id.ToString();
             username = jsonObj.username;
+
         }
         private void getRepositories()
         {
@@ -57,7 +71,7 @@ namespace BitBucket
             using (client = new HttpClient())
             {
                 client.DefaultRequestHeaders.Add("Authorization", "Bearer " + textBox1.Text);
-                var response = client.GetAsync($"https://api.bitbucket.org/2.0/repositories/{username}").Result;
+                var response = client.GetAsync($"https://api.bitbucket.org/2.0/repositories/{username}?page={ReposPage}&per_page=100").Result;
                 if (response.IsSuccessStatusCode)
                 {
                     var responseContent = response.Content;
