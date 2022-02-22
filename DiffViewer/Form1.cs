@@ -98,23 +98,23 @@ for the United States of America
 					box.AppendText(piece.Text);
 					break;
 				case ChangeType.Deleted:
-					box.AppendText(piece.Text);
 					box.SelectionColor = Color.Red;
+					box.AppendText(piece.Text);
 					break;
 				case ChangeType.Inserted:
-					box.AppendText(piece.Text);
 					box.SelectionColor = Color.Blue;
+					box.AppendText(piece.Text);
 					break;
 				case ChangeType.Imaginary:
 					box.AppendText(String.Empty);
 					break;
 				case ChangeType.Modified:
-					box.AppendText(piece.Text);
 					box.SelectionColor = Color.Green;
+					box.AppendText(piece.Text);
 					break;
 				default:
-					box.AppendText(piece.Text);
 					box.SelectionColor = Color.Purple;
+					box.AppendText(piece.Text);
 					break;
 			}
 		}
