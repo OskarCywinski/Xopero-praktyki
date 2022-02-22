@@ -17,7 +17,7 @@ namespace BitBucket
     {
         List<Repositories> Repo;
         HttpClient client;
-        string ID;
+        string ID,username;
         public Form1()
         {
             InitializeComponent();
@@ -49,6 +49,7 @@ namespace BitBucket
 
             label2.Text = ("Użytkownik: " + jsonObj.username);
             ID = jsonObj.account_id.ToString();
+            username = jsonObj.username;
         }
         private void getRepositories()
         {
@@ -56,7 +57,7 @@ namespace BitBucket
             using (client = new HttpClient())
             {
                 client.DefaultRequestHeaders.Add("Authorization", "Bearer " + textBox1.Text);
-                var response = client.GetAsync($"https://api.bitbucket.org/2.0/repositories/OskarCywinski").Result;
+                var response = client.GetAsync($"https://api.bitbucket.org/2.0/repositories/{username}").Result;
                 if (response.IsSuccessStatusCode)
                 {
                     var responseContent = response.Content;
@@ -67,10 +68,10 @@ namespace BitBucket
                     MessageBox.Show("Wprowadź poprawne dane");
             }
         }
+
         private void deserializeJSONRepositories(string json)
         {
             Repositories RepoObj;
-            MessageBox.Show(json);
             RepoObj = JsonSerializer.Deserialize<Repositories>(json);
 
             for (int i = 0; i < RepoObj.values.Count; i++)
@@ -87,9 +88,9 @@ namespace BitBucket
                 for (int i = 0; i < length; i++)
                 {
                     var values = new List<KeyValuePair<string, string>>();
-                    values.Add(new KeyValuePair<string, string>("slug", name + i.ToString()));
+                    //values.Add(new KeyValuePair<string, string>("slug", name + i.ToString()));
                     var content = new FormUrlEncodedContent(values);
-                    var responsePost = client.PostAsync($"https://api.bitbucket.org/2.0/repositories/oskarcywinski/{repo_slug}", content).Result;
+                    var responsePost = client.PostAsync($"https://api.bitbucket.org/2.0/repositories/{username}/{repo_slug}", content).Result;
                     if (responsePost.IsSuccessStatusCode)
                     {
                         MessageBox.Show("działa " + i + " " + responsePost.StatusCode);
@@ -108,6 +109,11 @@ namespace BitBucket
         private void button2_Click(object sender, EventArgs e)
         {
             createRepo(textBox2.Text, (int)numericUpDown1.Value);
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

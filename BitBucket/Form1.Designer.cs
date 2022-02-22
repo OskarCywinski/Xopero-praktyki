@@ -70,7 +70,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(312, 9);
+            this.label2.Location = new System.Drawing.Point(178, 6);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(63, 25);
             this.label2.TabIndex = 3;
@@ -79,9 +79,9 @@
             // checkedListBox1
             // 
             this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Location = new System.Drawing.Point(12, 130);
+            this.checkedListBox1.Location = new System.Drawing.Point(12, 112);
             this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(311, 310);
+            this.checkedListBox1.Size = new System.Drawing.Size(311, 328);
             this.checkedListBox1.TabIndex = 5;
             // 
             // textBox2
